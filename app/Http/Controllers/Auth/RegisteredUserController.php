@@ -10,6 +10,7 @@ use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 use Illuminate\Validation\Rules;
 use Inertia\Inertia;
 use Inertia\Response;
@@ -64,10 +65,21 @@ class RegisteredUserController extends Controller
 
         // Find the referral with the provided token
         $referral = Referral::where('token', $request->token)->where('is_registered', false)->first();
-        if ($referral) {
+        
+        if (!$referral) {
+            return;
+        }
+
+        DB::beginTransaction();
+
+        try {
             // Update the referral as used and increase the referrer's referral count
             $referral->update(['is_registered' => true]);
             $referral->referrer()->increment('referrals_count');
+        } catch (\Throwable $th) {
+            DB::rollBack();
         }
+
+        DB::commit();
     }
 }
