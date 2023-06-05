@@ -4,7 +4,7 @@ import AuthenticatedLayout from "@/Layouts/AuthenticatedLayout.vue";
 import { Head } from "@inertiajs/vue3";
 import { onMounted } from "vue";
 
-type Referee = {
+type Referral = {
     id: number;
     referrer_name: string;
     email: string;
@@ -20,7 +20,7 @@ type Link = {
 
 let props = defineProps<{
     referrals: {
-        data: Referee[];
+        data: Referral[];
         meta: {
             links: Link[];
             last_page: number;

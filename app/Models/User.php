@@ -44,7 +44,7 @@ class User extends Authenticatable
         'password' => 'hashed',
     ];
 
-    public function referee(): HasMany
+    public function referals(): HasMany
     {
         return $this->hasMany(Referral::class, 'referrer_id');
     }
