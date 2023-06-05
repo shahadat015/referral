@@ -17,7 +17,7 @@ class Admin
     public function handle(Request $request, Closure $next): Response
     {
         if (! Auth::user()->isAdmin()) {
-            return redirect()->route('dashboard');
+            return abort(403);
         }
 
         return $next($request);

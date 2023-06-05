@@ -135,6 +135,5 @@ it('normal users can not see referral list page', function () {
         ->actingAs($user)
         ->get('/admin/referrals');
 
-    $response->assertStatus(302)
-        ->assertRedirect('/dashboard');
+    $response->assertStatus(403);
 });
