@@ -6,17 +6,16 @@
 -   Generate Application Key `php artisan key:generate`
 -   Change your environment variables
 
-    ```
-    APP_URL="http://localhost:8000"
-    QUEUE_CONNECTION=database
-    DB_DATABASE=referrals
-    MAIL_MAILER=smtp
-    MAIL_HOST=sandbox.smtp.mailtrap.io
-    MAIL_PORT=2525
-    MAIL_USERNAME=user_username
-    MAIL_PASSWORD=your_password
-
-    ```
+```
+APP_URL="http://localhost:8000"
+QUEUE_CONNECTION=database
+DB_DATABASE=referrals
+MAIL_MAILER=smtp
+MAIL_HOST=sandbox.smtp.mailtrap.io
+MAIL_PORT=2525
+MAIL_USERNAME=user_username
+MAIL_PASSWORD=your_password
+```
 
 -   Migrate tables & seed database `php artisan migrate --seed`
 -   Install npm dependencies `npm install`
