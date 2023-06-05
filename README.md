@@ -1,11 +1,12 @@
 ## How to run?
 
--   Clone this repository `git clone https://github.com/shahadat015/laravel-chatgpt.git`
+-   Clone this repository `git clone https://github.com/shahadat015/referral.git`
 -   Install composer dependencies `composer install`
 -   Copy example env file and rename .env `cp .env.example .env`
 -   Generate Application Key `php artisan key:generate`
 -   Change your environment variables
-    `
+
+    ```
     APP_URL="http://localhost:8000"
     QUEUE_CONNECTION=database
     DB_DATABASE=referrals
@@ -15,7 +16,7 @@
     MAIL_USERNAME=user_username
     MAIL_PASSWORD=your_password
 
-    `
+    ```
 
 -   Migrate tables & seed database `php artisan migrate --seed`
 -   Install npm dependencies `npm install`
