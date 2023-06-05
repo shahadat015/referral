@@ -20,7 +20,9 @@ MAIL_PASSWORD=your_password
 -   Migrate tables & seed database `php artisan migrate --seed`
 -   Install npm dependencies `npm install`
 -   Run queue worker `php artisan queue:work`
--   Run Project `php artisan serve` and `npm run dev` and [Go To http://localhost:8000](http://localhost:8000)
+-   Run Project `php artisan serve` and `npm run dev`
 -   You'r done!
+
+-   Test amin user email `admin@example.com` and password is `password`,
 
 -   Run test for Referral feature `./vendor/bin/pest tests/Feature/ReferralTest.php`
