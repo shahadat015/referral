@@ -44,7 +44,7 @@ class ReferralController extends Controller
     {
         $token = Str::uuid()->toString();
 
-        Auth::user()->referals()->create([
+        Auth::user()->referrals()->create([
             'email' => $request->email,
             'token' => $token,
         ]);

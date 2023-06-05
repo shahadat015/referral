@@ -51,14 +51,14 @@ defineProps<{
                                         route().current('referrals.create')
                                     "
                                 >
-                                    Create Referals
+                                    Create Referrals
                                 </NavLink>
                                 <NavLink
                                     v-if="page.props.isAdmin"
                                     :href="route('admin.referrals')"
                                     :active="route().current('admin.referrals')"
                                 >
-                                    Referals List
+                                    Referrals List
                                 </NavLink>
                             </div>
                         </div>
