@@ -6,7 +6,6 @@ use App\Http\Requests\ReferralRequest;
 use App\Http\Resources\ReferralCollection;
 use App\Mail\ReferralInvite;
 use App\Models\Referral;
-use App\Models\User;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Mail;
